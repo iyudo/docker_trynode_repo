@@ -1,10 +1,10 @@
 FROM node:carbon
 
-# Copy source code
-COPY . /frontapp
-
 # Create the working dir
 WORKDIR /frontapp
+
+# Copy source code
+ADD . /frontapp
 
 # Installl the dependencies
 RUN npm install
