@@ -6,6 +6,9 @@ WORKDIR /frontapp
 # Copy source code
 ADD . /frontapp
 
+# Define environment variable
+ENV USER root
+
 # Installl the dependencies
 RUN npm install -g @angular/cli && npm install
 
