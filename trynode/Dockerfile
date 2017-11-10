@@ -12,5 +12,5 @@ RUN npm install
 COPY . .
 
 # Publish the port
-EXPOSE 7070
+# EXPOSE 7070
 CMD [ "npm", "start"]
