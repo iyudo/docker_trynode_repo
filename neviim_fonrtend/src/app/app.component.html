@@ -1,0 +1,13 @@
+<app-login *ngIf="this.route =='/login'"></app-login>
+
+<div *ngIf="this.route !='/login'" class="page-wrapper">
+    <app-header></app-header>
+    <div class="page-container" >
+        <app-sidebar></app-sidebar>
+        <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+</div>
+
+
+

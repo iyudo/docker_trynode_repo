@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.headerMenu{
+    color:white;
+}
+
+.headerMenu:hover, .headerMenu:focus, .headerMenu:active{
+    color:white;
+    background-color: #3f4457 !important;    
+}
+
+.activeHeader, .activeHeader:hover, .activeHeader:focus, .activeHeader:active{
+    background-color: #3f4457;
+}
+
+.cdk-overlay-container{
+    z-index: 10055;
+}
+
+/*@media only screen and (min-width: 768px){
+    .page-sidebar-wrapper{
+        position: fixed;
+    }
+}*/

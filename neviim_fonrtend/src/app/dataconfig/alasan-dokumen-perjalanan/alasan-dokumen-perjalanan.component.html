@@ -1,0 +1,165 @@
+<div class="page-content-wrapper">
+  <!-- BEGIN CONTENT BODY -->
+  <div class="page-content">
+    <div class="page-head">
+        <!-- BEGIN PAGE TITLE -->
+        <div class="page-title">
+            <h1>{{this.title.alasanDokumenPerjalanan}}
+                <small>Lorem Ipsum & net corem herid</small>
+            </h1>
+        </div>
+    </div>
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <span class="active">Konfigurasi Data</span>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <span class="active">{{this.title.alasanDokumenPerjalanan}}</span>
+            </li>
+        </ul>
+
+  <div class="row">
+    <div class="col-md-12">
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption"><i class="fa fa-cog" aria-hidden="true"></i> Tabel {{this.title.alasanDokumenPerjalanan}}</div>
+                <div class="actions">
+                        <a [routerLink]="['/'+this.routerUrl.tambahAlasanDokumenPerjalanan]" class="btn btn-outline btn-info btn-sm">
+                            <i class="fa fa-plus"></i>
+                            Add {{this.title.alasanDokumenPerjalanan}}
+                        </a>
+                        <a href="#" class="btn btn-outline green btn-sm">
+                            <i class="fa fa-file-pdf-o"></i>
+                            PDF
+                        </a>
+                        <a href="#" class="btn btn-outline purple btn-sm">
+                            <i class="fa fa-file-excel-o"></i>
+                            CSV
+                        </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+
+                <a class="btn btn-outline blue btn-sm" data-toggle="modal" href="#modaladp">
+                    <i class="fa fa-search" aria-hidden="true"></i> Search
+                </a>
+
+                        <button class="btn btn-outline red btn-sm">
+                            <i class="fa fa-trash" aria-hidden="true"></i> Delete
+                        </button>
+
+                        <br/>
+                        <br/>
+                        <table class="table table-striped table-bordered table-advance table-hover" id="sample_1">
+                            <tr>
+                                <th class="text-center">
+                                    <label class="mt-checkbox mt-checkbox-outline">
+
+                                        <input type="checkbox" value="1" name="">
+                                        <span></span>
+                                    </label>
+                                </th>
+                                <th class="text-center">No.</th>
+                                <th>ID {{ this.title.alasanDokumenPerjalanan }}</th>
+                                <th>Deskripsi</th>
+                                <th class="text-center">Status</th>
+                                <th class="text-center">Action</th>
+                            </tr>
+                            <tr *ngFor="let alasanDokPerjalanan of alasanDokPerjalanans; let i = index">
+                                <td class="text-center">
+                                    <label class="mt-checkbox mt-checkbox-outline">
+
+                                        <input type="checkbox" value="2" (change)="onCheckedAdp($event)" [(ngModel)]="alasanDokPerjalanan.id">
+                                        <span></span>
+                                    </label>
+                                </td>
+                                <td class="text-center">{{ i + 1 }}.</td>
+                                <td>{{ alasanDokPerjalanan.idAlasanDokPerjalanan }}</td>
+                                <td>{{ alasanDokPerjalanan.description }}</td>
+                                <td class="text-center">
+                                    <!-- <span class="badge" [ngClass]="{ 'bg-green-meadow' : alasanDokPerjalanan.active == true, 'badge-danger' : alasanDokPerjalanan.active == false }">
+                                        {{ alasanDokPerjalanan.activeVal }}
+                                    </span> -->
+                                    <span *ngIf="this.alasanDokPerjalanan.active" class="badge bg-green-meadow">
+                                        Aktif
+                                    </span>
+                                    <span *ngIf="!this.alasanDokPerjalanan.active" class="badge badge-danger" >
+                                        Non Aktif
+                                    </span>
+                                </td>
+                                <td class="text-center">
+                                    <a (click)="onEditPageAdp(alasanDokPerjalanan)" class="btn yellow-mint btn-outline btn-xs" >
+                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default">1</button>
+                            <button type="button" class="btn btn-default">2</button>
+                            <button type="button" class="btn btn-default">3</button>
+                            <button type="button" class="btn btn-default">4</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+  <!-- /.modal -->
+  <div class="modal fade bs-modal-lg" id="modaladp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                  <h4 class="modal-title">Search</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="form-horizontal" role="form">
+                    <div class="form-body">
+                          <div class="form-group">
+                              <label class="col-md-4 control-label">ID {{this.title.alasanDokumenPerjalanan}}</label>
+                              <div class="col-md-8">
+                                  <input type="text" class="form-control input-inline input-medium" placeholder="Enter text" [(ngModel)]="this.alasanDokPerjalanan.idAlasanDokPerjalanan">
+                                  <span class="help-inline"> Example: ADP001. </span>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-md-4 control-label">Deskripsi</label>
+                              <div class="col-md-8">
+                                  <input type="text" class="form-control input-inline input-medium" placeholder="Enter text" [(ngModel)]="this.alasanDokPerjalanan.description">
+                                  <span class="help-inline"> Example: Habis Berlaku. </span>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-md-4 control-label">Status</label>
+                              <div class="col-md-8">
+                                      <select class="form-control input-inline input-medium" [(ngModel)]="this.alasanDokPerjalanan.activeStr">
+                                          <option [value]="true">Aktif</option>
+                                          <option [value]="false">Non Aktif</option>
+                                      </select>
+                                  <span class="help-inline"> Example: Aktif. </span>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-md-4 control-label"></label>
+                              <div class="col-md-8">
+                                  <button type="button" class="btn green" data-dismiss="modal" (click)="onLoadAdp()">Search</button>
+                                  <button type="button" class="btn dark btn-outline" data-dismiss="modal">Close</button>
+                              </div>
+                          </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+  </div>
+
+    </div>
+    <!-- END CONTENT BODY -->
+</div>
+<!-- END CONTENT -->
+

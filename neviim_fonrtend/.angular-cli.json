@@ -1,0 +1,76 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "imigrasi-poc"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "../node_modules/font-awesome/css/font-awesome.min.css",
+        "../src/assets/css/components.min.css",        
+        "../src/assets/css/default.min.css",
+        "../src/assets/css/custom.min.css",
+        "../src/assets/css/layout.min.css",
+        "../src/assets/css/login.min.css",
+        "../src/assets/css/datepicker.min.css",        
+        "styles.css"
+      ],
+      "scripts": [        
+        "../src/assets/js/jquery.min.js",
+        "../src/assets/js/bootstrap.min.js",        
+        "../src/assets/js/datepicker.min.js",                
+        "../src/assets/js/morris.min.js",
+        "../src/assets/js/raphael-min.js",
+        "../src/assets/js/app.min.js",                
+        "../src/assets/js/dashboard.min.js",
+        "../src/assets/js/components-date-time-pickers.min.js",
+        "../src/assets/js/layout.min.js"
+                            
+      ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json"
+    },
+    {
+      "project": "src/tsconfig.spec.json"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}

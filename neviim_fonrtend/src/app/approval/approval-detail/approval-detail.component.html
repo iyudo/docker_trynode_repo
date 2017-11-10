@@ -1,0 +1,284 @@
+<div class="page-content-wrapper">
+    <!-- BEGIN CONTENT BODY -->
+    <div class="page-content">
+      <div class="page-head">
+          <!-- BEGIN PAGE TITLE -->
+          <div class="page-title">
+              <h1>{{this.title.approvalDetail}}
+                  <small>Lorem Ipsum & net corem herid</small>
+              </h1>
+          </div>
+      </div>
+      <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <a [routerLink]="['/'+this.routerUrl.approval]">{{this.title.approval}}</a>
+                <i class="fa fa-circle"></i>
+            </li>                         
+            <li>
+                <span class="active">{{this.title.approvalDetail}}</span>
+                <i class="fa fa-circle"></i>  
+            </li>
+          </ul>
+        
+    <div class="row">
+      <div class="col-md-12">
+          <div class="portlet light bordered">
+             
+              <div class="portlet-body">
+
+                    <div class="form-horizontal" role="form">
+                        <fieldset>
+                        <legend>Approval Data</legend>
+                        
+                        <div class="form-body">
+                            <div class="row">
+                                
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label class="col-md-6 control-label">ID Approval</label>
+                                        <div class="col-md-6">
+                                            <input type="text" disabled class="form-control input-inline input-medium" value="App_1209201700001">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-6 control-label">Persetujuan</label>
+                                        <div class="col-md-6">
+                                            <div class="mt-radio-inline">
+                                                <label class="mt-radio">
+                                                    <input type="radio" name="status" value="setuju" checked> Setuju
+                                                    <span></span>
+                                                </label>
+                                                <label class="mt-radio">
+                                                    <input type="radio" name="status" value="tidak setuju"> Tidak Setuju
+                                                    <span></span>
+                                                </label>                              
+                                            </div>                                        
+                                        </div>
+                                    </div>                                                                       
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Status</label>
+                                        <div class="col-md-9">                                        
+                                            <p class="form-control-static">Need Approval</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Tanggal Approval</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control input-inline input-medium" [matDatepicker]="ApprDate" (click)="ApprDate.open()" placeholder="Enter text">
+                                            <mat-datepicker #ApprDate></mat-datepicker>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>      
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label class="col-md-6 control-label"></label>
+                                        <div class="col-md-6"> 
+                                            <button type="button" class="btn green">Simpan</button>                                        
+                                            <button type="reset" class="btn default">Reset</button>                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        </fieldset>
+                    </div>
+                    <br/>
+                    <br/>                    
+                    <div class="form-horizontal" role="form">
+                        <fieldset>
+                        <legend>Data Pembatalan</legend>
+                        
+                        <div class="form-body">
+                            <div class="row">
+                                
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label class="col-md-6 control-label">ID Surat Pembatalan *</label>
+                                        <div class="col-md-6">
+                                            <input type="text" disabled class="form-control input-inline input-medium" value="BTL_1209201700001">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-6 control-label">Tanggal Permohonan *</label>
+                                        <div class="col-md-6">
+                                                <input type="text" class="form-control input-inline input-medium" [matDatepicker]="PermDate" (click)="PermDate.open()" [(ngModel)]="date" [ngModelOptions]="{standalone: true}">
+                                                <mat-datepicker #PermDate></mat-datepicker>                                            
+                                        </div>
+                                    </div>                                                                       
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="form-group">
+                                        <label class="col-md-5 control-label">Nomor Surat Pembatalan *</label>
+                                        <div class="col-md-7">                                        
+                                            <input type="text" disabled class="form-control input-inline input-medium" value="BTL/001/12092017">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-5 control-label">Alasan *</label>
+                                        <div class="col-md-7">
+                                                <input type="text" disabled class="form-control input-inline input-medium" value="Tidak Diambil">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                                      
+                        </div>
+
+                        </fieldset>
+                    </div>
+                    <br/>
+                    <br/>                    
+                    
+                    <fieldset>
+                    <legend>Dokumen Perjalanan Republik Indonesia</legend>
+                    
+                    <table class="table table-striped table-bordered table-advance table-hover" id="sample_1">            
+                        <tr>
+                            <th class="text-center">
+                                <label class="mt-checkbox mt-checkbox-outline">
+                                    
+                                <input type="checkbox" value="1" name="">
+                                <span></span>
+                                </label>
+                            </th>
+                            <th class="text-center">No.</th>
+                            <th>ID Dokumen Perjalanan</th>                          
+                            <th>Kode Permohonan</th>
+                            <th>Kode Billing</th>
+                            <th>Nama Lengkap</th>
+                            <th>Jenis Dok Perjalanan</th>
+                            <th>Tanggal Permohonan</th>
+                            <th class="text-center">Status</th>                                                  
+                        </tr>                                                                       
+                        <tr>
+                            <td class="text-center">
+                                <label class="mt-checkbox mt-checkbox-outline">
+                                    
+                                <input type="checkbox" value="2" name="">
+                                <span></span>
+                                </label>
+                            </td>
+                            <td class="text-center">1.</td>
+                            <td>A001</td>                          
+                            <td>121000123</td>
+                            <td>82017081500001</td>
+                            <td>Budi Budiman</td>
+                            <td>DPRI Biasa 24 H</td>
+                            <td>06-06-2017</td>
+                            <td class="text-center"><span class="badge badge-success badge-roundless">Aktif</span></td>                                                                    
+                        </tr>
+                        <tr>
+                                <td class="text-center">
+                                <label class="mt-checkbox mt-checkbox-outline">
+                                    
+                                    <input type="checkbox" value="3" name="">
+                                    <span></span>
+                                </label>
+                                </td>
+                                <td class="text-center">2.</td>
+                                <td>A002</td>                          
+                                <td>121000124</td>
+                                <td>82017081500002</td>
+                                <td>Toro Margen</td>
+                                <td>DPRI Biasa 24 H</td>
+                                <td>08-06-2017</td>
+                                <td class="text-center"><span class="badge badge-success badge-roundless">Aktif</span></td>       
+                            </tr>
+                        <tr>
+                            <td class="text-center">
+                                <label class="mt-checkbox mt-checkbox-outline">
+                                    
+                                <input type="checkbox" value="4" name="">
+                                <span></span>
+                                </label>
+                            </td>
+                            <td class="text-center">3.</td>
+                            <td>A003</td>                          
+                            <td>121000124</td>
+                            <td>82017081500003</td>
+                            <td>Budi Budiman</td>
+                            <td>DPRI Elektronik 24 H</td>
+                            <td>09-06-2017</td>
+                            <td class="text-center"><span class="badge badge-success badge-roundless">Aktif</span></td>            
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <label class="mt-checkbox mt-checkbox-outline">
+                                
+                                <input type="checkbox" value="5" name="">
+                                <span></span>
+                                </label>
+                            </td>
+                            <td class="text-center">4.</td>
+                            <td>A004</td>                          
+                            <td>121000125</td>
+                            <td>82017081500004</td>
+                            <td>Arya Wiguna</td>
+                            <td>DPRI Elektronik 24 H</td>
+                            <td>10-06-2017</td>
+                            <td class="text-center"><span class="badge badge-success badge-roundless">Aktif</span></td>           
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <label class="mt-checkbox mt-checkbox-outline">
+                                
+                                <input type="checkbox" value="6" name="">
+                                <span></span>
+                                </label>
+                            </td>
+                            <td class="text-center">5.</td>
+                            <td>A005</td>                          
+                            <td>121000126</td>
+                            <td>82017081500005</td>
+                            <td>Marsha Timothy</td>
+                            <td>DPRI Biasa 24 H</td>
+                            <td>12-06-2017</td>
+                            <td class="text-center"><span class="badge badge-success badge-roundless">Aktif</span></td>           
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <label class="mt-checkbox mt-checkbox-outline">
+                                
+                                <input type="checkbox" value="7" name="">
+                                <span></span>
+                                </label>
+                            </td>
+                            <td class="text-center">6.</td>
+                            <td>A006</td>                          
+                            <td>121000127</td>
+                            <td>82017081500006</td>
+                            <td>Poppy Bunga</td>
+                            <td>DPRI Elektronik 24 H</td>
+                            <td>13-06-2017</td>
+                            <td class="text-center"><span class="badge badge-success badge-roundless">Aktif</span></td>           
+                        </tr>                
+                    </table>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default">1</button>
+                        <button type="button" class="btn btn-default">2</button>
+                        <button type="button" class="btn btn-default">3</button>
+                        <button type="button" class="btn btn-default">4</button>
+                    </div>
+
+                    </fieldset>
+                    
+                                 
+              </div>
+          </div>
+      </div>
+      
+    </div>   
+  
+    </div>
+    <!-- END CONTENT BODY -->
+  </div>
+  <!-- END CONTENT -->
+  
+  

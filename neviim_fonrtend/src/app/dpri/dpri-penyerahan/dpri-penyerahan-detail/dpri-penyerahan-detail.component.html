@@ -1,0 +1,163 @@
+<div class="page-content-wrapper">
+  <!-- BEGIN CONTENT BODY -->
+  <div class="page-content">
+    <div class="page-head">
+        <!-- BEGIN PAGE TITLE -->
+        <div class="page-title">
+            <h1>{{this.title.dpriPenyerahanDetail}}
+                <small>Lorem Ipsum & net corem herid</small>
+            </h1>
+        </div>
+    </div>
+    <ul class="page-breadcrumb breadcrumb">             
+            <li>
+              <span class="active">DPRI</span>
+              <i class="fa fa-circle"></i>              
+          </li>
+            <li>
+              <a [routerLink]="['/'+this.routerurl.dpriPenyerahan]">Penyerahan</a>
+              <i class="fa fa-circle"></i>
+            </li>
+            <li>
+              <span class="active">{{this.title.dpriPenyerahanDetail}}</span>
+          </li>
+        </ul>
+      
+  <div class="row">
+    <div class="col-md-12">
+        <div class="portlet light bordered">
+            
+            <div class="portlet-body">
+               
+              <div class="form-horizontal" role="form">
+                <div class="form-body">
+                  <div class="row">
+                      <div class="col-md-6">
+                        <fieldset>
+                          <legend>Data Pemohon</legend>
+                          <div class="form-group">
+                              <label class="col-md-5 control-label">Kantor Imigrasi</label>
+                              <div class="col-md-7">
+                                  <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-md-5 control-label">Kode Permohonan</label>
+                              <div class="col-md-7">
+                                  <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-md-5 control-label">Nama Pemohon</label>
+                              <div class="col-md-7">
+                                  <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-md-5 control-label">Nama Pemohon di Paspor</label>
+                              <div class="col-md-7">
+                                  <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-md-5 control-label">Tanggal Lahir</label>
+                              <div class="col-md-7">
+                                  <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
+                              </div>
+                          </div>
+                        </fieldset>
+    
+                        <fieldset>
+                          <legend>Data Penerima</legend>
+                          <div class="form-group">
+                              <label class="col-md-5 control-label">Nama</label>
+                              <div class="col-md-7">
+                                  <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-md-5 control-label">No. Telepon</label>
+                              <div class="col-md-7">
+                                  <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
+                              </div>
+                          </div>
+                        </fieldset>
+                      </div>
+                      <div class="col-md-6">
+                          <fieldset>
+                            <legend>Dokumen Perjalanan</legend>
+                            <div class="form-group">
+                                <label class="col-md-5 control-label">Tanggal Permohonan</label>
+                                <div class="col-md-7">
+                                    <p class="form-control-static">13-06-2017</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-5 control-label">Jenis Permohonan</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-5 control-label">Jenis Dok Perjalanan</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-5 control-label">Jumlah Halaman</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-5 control-label">Kode Pembayaran</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-5 control-label">No. Bukti Bayar</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-5 control-label">No. Paspor</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control input-inline input-medium" placeholder="Enter Text">
+                                </div>
+                            </div>
+                          </fieldset>                                
+                      </div>
+                  </div>
+                </div>                                                          
+                
+                <div class="form-actions">
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="col-md-offset-5 col-md-7">
+                            <button type="submit" class="btn green">Submit</button>
+                            <button type="button" class="btn default" [routerLink]="['/'+this.routerurl.dpriPenyerahan]">Back</button>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        
+                      </div>
+                        
+                    </div>
+                </div>
+              </div>
+              
+            </div>
+        </div>
+    </div>
+    
+  </div>
+
+  </div>
+  <!-- END CONTENT BODY -->
+</div>
+<!-- END CONTENT -->
+

@@ -1,0 +1,106 @@
+<div class="page-content-wrapper">
+    <!-- BEGIN CONTENT BODY -->
+    <div class="page-content">
+      <div class="page-head">
+          <!-- BEGIN PAGE TITLE -->
+          <div class="page-title">
+              <h1>{{this.title.notifikasiDetail}}
+                  <small>Lorem Ipsum & net corem herid</small>
+              </h1>
+          </div>
+      </div>
+      <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <a [routerLink]="['/'+this.routerUrl.notifikasi]">{{this.title.notifikasi}}</a>
+                <i class="fa fa-circle"></i>
+            </li>                         
+            <li>
+                <span class="active">{{this.title.notifikasiDetail}}</span>
+                <i class="fa fa-circle"></i>  
+            </li>
+          </ul>
+        
+    <div class="row">
+      <div class="col-md-12">
+          <div class="portlet light bordered">
+             
+              <div class="portlet-body">
+
+                    <div class="form-horizontal" role="form">
+                        <fieldset>
+                        <legend>Setting Notifikasi</legend>
+                        
+                        <div class="form-body">                                                            
+                                
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">ID Notifikasi</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control input-inline input-medium" value="NTF001">                                      
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Deskripsi</label>
+                                <div class="col-md-9">
+                                    <textarea class="form-control input-inline input-medium">Notifikasi Approval</textarea>                                                                
+                                </div>
+                            </div>                                                                       
+                              
+                              
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Interval</label>
+                                <div class="col-md-9">                                        
+                                    <div class="mt-radio-inline">
+                                        <label class="mt-radio">
+                                            <input type="radio" name="status" value="setuju" checked> Daily
+                                            <span></span>
+                                        </label>
+                                        <label class="mt-radio">
+                                            <input type="radio" name="status" value="tidak setuju"> Weekly
+                                            <span></span>
+                                        </label>                              
+                                    </div>                                       
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Tanggal Awal Berlaku Notifikasi</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control input-inline input-medium" [matDatepicker]="TglAwlNotif" (click)="TglAwlNotif.open()" placeholder="Enter text">
+                                    <mat-datepicker #TglAwlNotif></mat-datepicker>                                    
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Tanggal Akhir Berlaku Notifikasi</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control input-inline input-medium" [matDatepicker]="TglAkhNotif" (click)="TglAkhNotif.open()" placeholder="Enter text">
+                                    <mat-datepicker #TglAkhNotif></mat-datepicker>
+                                    
+                                </div>
+                            </div>
+                                                                                               
+                            <div class="form-group">
+                                <label class="col-md-3 control-label"></label>
+                                <div class="col-md-9"> 
+                                    <button type="button" class="btn green">Simpan</button>                                        
+                                    <button [routerLink]="['/'+this.routerUrl.notifikasi]" class="btn default">Back</button>                                        
+                                </div>
+                            </div>
+                                
+                            
+                        </div>
+
+                        </fieldset>
+                    </div>                    
+                                 
+              </div>
+          </div>
+      </div>
+      
+    </div>   
+  
+    </div>
+    <!-- END CONTENT BODY -->
+  </div>
+  <!-- END CONTENT -->
+  
+  

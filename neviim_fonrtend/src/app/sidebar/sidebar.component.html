@@ -1,0 +1,216 @@
+  <!-- BEGIN SIDEBAR -->
+  <div class="page-sidebar-wrapper">
+        <!-- BEGIN SIDEBAR -->
+        <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+        <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+        <div class="page-sidebar navbar-collapse collapse">
+            <!-- BEGIN SIDEBAR MENU -->
+            <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+            <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+            <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+            <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+            <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+            <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+            <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+                <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
+                <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                <li class="sidebar-toggler-wrapper hide">
+                    <div class="sidebar-toggler">
+                        <span></span>
+                    </div>
+                </li>
+                <!-- END SIDEBAR TOGGLER BUTTON -->
+              
+               
+                <!-- <li class="nav-item start active open">
+                    <a href="javascript:;" class="nav-link nav-toggle">                      
+                        <span class="title">Manajemen Master</span>
+                                                        
+                    </a>                                
+                </li>-->
+                <li class="heading">
+                    <h3 class="uppercase">Menu Utama</h3>
+                </li>                  
+                <li class="nav-item" [ngClass]="{'open active': this.route == '/'+this.routerUrl.dpriPermohonan || this.route == '/'+this.routerUrl.dpriPembayaran || this.route == '/'+this.routerUrl.dpriAlokasi || this.route == '/'+this.routerUrl.dpriAlokasiDetail || this.route == '/'+this.routerUrl.dpriPencetakan || this.route == '/'+this.routerUrl.dpriPenyerahan || this.route == '/'+this.routerUrl.dpriPenyerahanDetail || this.route == '/'+this.routerUrl.dpriPembatalan}">
+                    <a href="#" class="nav-link nav-toggle">                        
+                        <i class="fa fa-id-card" aria-hidden="true"></i> 
+                        <span class="title">DPRI</span>
+                        <span class="arrow" [ngClass]="{'open': this.route == '/'+this.routerUrl.dpriPermohonan || this.route == '/'+this.routerUrl.dpriPembayaran || this.route == '/'+this.routerUrl.dpriAlokasi || this.route == '/'+this.routerUrl.dpriAlokasiDetail || this.route == '/'+this.routerUrl.dpriPencetakan || this.route == '/'+this.routerUrl.dpriPenyerahan || this.route == '/'+this.routerUrl.dpriPenyerahanDetail || this.route == '/'+this.routerUrl.dpriPembatalan}"></span>                                    
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item" [ngClass]="{'active': this.route == '/'+this.routerUrl.dpriPermohonan}">
+                            <a [routerLink]="['/'+this.routerUrl.dpriPermohonan]" class="nav-link ">
+                                <span class="title">Permohonan</span>
+            
+                            </a>
+                        </li>
+                        <li class="nav-item" [ngClass]="{'active': this.route == '/'+this.routerUrl.dpriAlokasi || this.route == '/'+this.routerUrl.dpriAlokasiDetail}">
+                            <a [routerLink]="['/'+this.routerUrl.dpriAlokasi]" class="nav-link ">
+                                <span class="title">Alokasi</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" [ngClass]="{'active': this.route == '/'+this.routerUrl.dpriPembayaran}">
+                            <a [routerLink]="['/'+this.routerUrl.dpriPembayaran]" class="nav-link ">
+                                <span class="title">Pembayaran</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" [ngClass]="{'active': this.route == '/'+this.routerUrl.dpriPencetakan}">
+                            <a [routerLink]="['/'+this.routerUrl.dpriPencetakan]" class="nav-link ">
+                                <span class="title">Pencetakan</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" [ngClass]="{'active': this.route == '/'+this.routerUrl.dpriPenyerahan || this.route == '/'+this.routerUrl.dpriPenyerahanDetail}">
+                            <a [routerLink]="['/'+this.routerUrl.dpriPenyerahan]" class="nav-link ">
+                                <span class="title">Penyerahan</span>
+                            </a>
+                        </li>          
+                        <li class="nav-item" [ngClass]="{'active': this.route == '/'+this.routerUrl.dpriPembatalan}">
+                            <a [routerLink]="['/'+this.routerUrl.dpriPembatalan]" class="nav-link ">
+                                <span class="title">Pembatalan</span>
+                            </a>
+                        </li>                                                                                                         
+                    </ul>                                
+                </li>
+                <li class="nav-item" [ngClass]="{'open active': this.route == '/'+this.routerUrl.splpPermohonan ||  this.route == '/'+this.routerUrl.splpAlokasi}">
+                    <a href="#" class="nav-link nav-toggle">
+                        <i class="fa fa-address-book" aria-hidden="true"></i>                        
+                        <span class="title">SPLP</span>
+                        <span class="arrow" [ngClass]="{'open': this.route == '/'+this.routerUrl.splpPermohonan ||  this.route == '/'+this.routerUrl.splpAlokasi}"></span>                                    
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item" [ngClass]="{'active': this.route == '/'+this.routerUrl.splpPermohonan}">
+                            <a [routerLink]="['/'+this.routerUrl.splpPermohonan]" class="nav-link ">
+                                <span class="title">Permohonan</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" [ngClass]="{'active': this.route == '/'+this.routerUrl.splpAlokasi}">
+                            <a [routerLink]="['/'+this.routerUrl.splpAlokasi]" class="nav-link ">
+                                <span class="title">Alokasi</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="#" class="nav-link ">
+                                <span class="title">Pembayaran</span>
+                            </a>
+                        </li>                        
+                        <li class="nav-item  ">
+                            <a href="#" class="nav-link ">
+                                <span class="title">Penyerahan</span>
+                            </a> 
+                        </li>          
+                        <li class="nav-item  ">
+                            <a href="#" class="nav-link ">
+                                <span class="title">Pembatalan</span>
+                            </a>
+                        </li>                                                                                                         
+                    </ul>                                
+                </li>
+                <li class="nav-item  " [ngClass]="{'open active': this.route == '/'+this.routerUrl.approval || this.route == '/'+this.routerUrl.approvalDetail}">
+                    <a [routerLink]="['/'+this.routerUrl.approval]" class="nav-link">
+                        <i class="fa fa-check-square-o" aria-hidden="true"></i>               
+                        <span class="title">Daftar Approval</span>                                                         
+                    </a>
+                </li>
+                <li class="nav-item start" [ngClass]="{'open active': this.route == '/'+this.routerUrl.jenisPermohonan || this.route == '/'+this.routerUrl.tambahJenisPermohonan || this.route == '/'+this.routerUrl.jenisDokumenPerjalanan || this.route == '/'+this.routerUrl.tambahJenisDokumenPerjalanan || this.route == '/'+this.routerUrl.jenisDokumen || this.route == '/'+this.routerUrl.tambahJenisDokumen || this.route == '/'+this.routerUrl.alasanDokumenPerjalanan || this.route == '/'+this.routerUrl.tambahAlasanDokumenPerjalanan || this.route == '/'+this.routerUrl.statusSipil || this.route == '/'+this.routerUrl.tambahStatusSipil || this.route == '/'+this.routerUrl.kewarganegaraan || this.route == '/'+this.routerUrl.tambahKewarganegaraan || this.route == '/'+this.routerUrl.bank || this.route == '/'+this.routerUrl.tambahBank || this.route == '/'+this.routerUrl.alasanPembatalan || this.route == '/'+this.routerUrl.tambahAlasanPembatalan || this.route == '/'+this.routerUrl.persyaratanPengajuan || this.route == '/'+this.routerUrl.tambahPersyaratanPengajuan || this.route == '/'+this.routerUrl.masaBerlaku || this.route == '/'+this.routerUrl.tambahMasaBerlaku || this.route == '/'+this.routerUrl.manajemenKanim || this.route == '/'+this.routerUrl.tambahManajemenKanim}">
+                    <a class="nav-link nav-toggle">
+                        <i class="fa fa-cogs" aria-hidden="true"></i>                      
+                        <span class="title">Konfigurasi Data</span>
+                        <span id="mmSpan" class="arrow" [ngClass]="{'open': this.route == '/'+this.routerUrl.jenisPermohonan || this.route == '/'+this.routerUrl.tambahJenisPermohonan || this.route == '/'+this.routerUrl.jenisDokumenPerjalanan || this.route == '/'+this.routerUrl.tambahJenisDokumenPerjalanan || this.route == '/'+this.routerUrl.jenisDokumen || this.route == '/'+this.routerUrl.tambahJenisDokumen || this.route == '/'+this.routerUrl.alasanDokumenPerjalanan || this.route == '/'+this.routerUrl.tambahAlasanDokumenPerjalanan || this.route == '/'+this.routerUrl.statusSipil || this.route == '/'+this.routerUrl.tambahStatusSipil || this.route == '/'+this.routerUrl.kewarganegaraan || this.route == '/'+this.routerUrl.tambahKewarganegaraan || this.route == '/'+this.routerUrl.bank || this.route == '/'+this.routerUrl.tambahBank || this.route == '/'+this.routerUrl.alasanPembatalan || this.route == '/'+this.routerUrl.tambahAlasanPembatalan || this.route == '/'+this.routerUrl.persyaratanPengajuan || this.route == '/'+this.routerUrl.tambahPersyaratanPengajuan || this.route == '/'+this.routerUrl.masaBerlaku || this.route == '/'+this.routerUrl.tambahMasaBerlaku || this.route == '/'+this.routerUrl.manajemenKanim || this.route == '/'+this.routerUrl.tambahManajemenKanim}"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item" [ngClass]="{'active': this.route == '/'+this.routerUrl.jenisPermohonan || this.route == '/'+this.routerUrl.tambahJenisPermohonan}">
+                            <a [routerLink]="['/'+this.routerUrl.jenisPermohonan]" class="nav-link">
+                                <span class="title">Jenis Permohonan</span>
+                            </a>
+                        </li>
+                        <li class="nav-item " [ngClass]="{active: this.route == '/'+this.routerUrl.jenisDokumenPerjalanan || this.route == '/'+this.routerUrl.tambahJenisDokumenPerjalanan}">
+                            <a [routerLink]="['/'+this.routerUrl.jenisDokumenPerjalanan]" class="nav-link ">
+                                <span class="title">Jenis Dokumen Perjalanan</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" [ngClass]="{active: this.route == '/'+this.routerUrl.jenisDokumen || this.route == '/'+this.routerUrl.tambahJenisDokumen}">
+                            <a [routerLink]="['/'+this.routerUrl.jenisDokumen]" class="nav-link ">
+                                <span class="title">Jenis Dokumen</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" [ngClass]="{active: this.route == '/'+this.routerUrl.alasanDokumenPerjalanan || this.route == '/'+this.routerUrl.tambahAlasanDokumenPerjalanan}">
+                            <a [routerLink]="['/'+this.routerUrl.alasanDokumenPerjalanan]" class="nav-link ">
+                                <span class="title">Alasan Dokumen Perjalanan</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" [ngClass]="{active: this.route == '/'+this.routerUrl.statusSipil || this.route == '/'+this.routerUrl.tambahStatusSipil}">
+                            <a [routerLink]="['/'+this.routerUrl.statusSipil]" class="nav-link ">
+                                <span class="title">Status Sipil</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" [ngClass]="{active: this.route == '/'+this.routerUrl.kewarganegaraan || this.route == '/'+this.routerUrl.tambahKewarganegaraan}">
+                            <a [routerLink]="['/'+this.routerUrl.kewarganegaraan]" class="nav-link">
+                                <span class="title">Kewarganegaraan</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" [ngClass]="{active: this.route == '/'+this.routerUrl.bank || this.route == '/'+this.routerUrl.tambahBank}">
+                            <a [routerLink]="['/'+this.routerUrl.bank]" class="nav-link ">
+                                <span class="title">Bank</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" [ngClass]="{active: this.route == '/'+this.routerUrl.alasanPembatalan || this.route == '/'+this.routerUrl.tambahAlasanPembatalan}">
+                            <a [routerLink]="['/'+this.routerUrl.alasanPembatalan]" class="nav-link ">
+                                <span class="title">Alasan Pembatalan</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" [ngClass]="{active: this.route == '/'+this.routerUrl.persyaratanPengajuan || this.route == '/'+this.routerUrl.tambahPersyaratanPengajuan}">
+                            <a [routerLink]="['/'+this.routerUrl.persyaratanPengajuan]" class="nav-link ">
+                                <span class="title">Persyaratan Pengajuan</span>
+            
+                            </a>
+                        </li>
+                        <li class="nav-item" [ngClass]="{active: this.route == '/'+this.routerUrl.masaBerlaku || this.route == '/'+this.routerUrl.tambahMasaBerlaku}">
+                            <a [routerLink]="['/'+this.routerUrl.masaBerlaku]" class="nav-link ">
+                                <span class="title">Masa Berlaku</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" [ngClass]="{active: this.route == '/'+this.routerUrl.manajemenKanim || this.route == '/'+this.routerUrl.tambahManajemenKanim}">
+                            <a [routerLink]="['/'+this.routerUrl.manajemenKanim]" class="nav-link ">
+                                <span class="title">Manajemen Kanim</span>
+                            </a>
+                        </li>                                                                                            
+                    </ul>
+                </li>
+                <li class="nav-item" [ngClass]="{'open active': this.route == '/'+this.routerUrl.notifikasi || this.route == '/'+this.routerUrl.notifikasiDetail}">
+                    <a [routerLink]="['/'+this.routerUrl.notifikasi]" class="nav-link">
+                        <i class="fa fa-bullhorn" aria-hidden="true"></i>                        
+                        <span class="title">Notifikasi</span>                                                         
+                    </a>
+                </li>                                                    
+                <li class="nav-item  ">
+                    <a href="#" class="nav-link nav-toggle">                        
+                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                        <span class="title">Manajemen Pengguna</span>
+                        <span class="arrow"></span>                                    
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item  ">
+                            <a href="#" class="nav-link ">
+                                <span class="title">Pengelolaan Pengguna</span>
+            
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="#" class="nav-link ">
+                                <span class="title">Hak Akses & Kewenangan</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="#" class="nav-link ">
+                                <span class="title">Konfigurasi Pengguna</span>
+                            </a>
+                        </li>                                                                                                                   
+                    </ul>                                
+                </li>
+                
+            </ul>
+            <!-- END SIDEBAR MENU -->
+            <!-- END SIDEBAR MENU -->
+        </div>
+        <!-- END SIDEBAR -->
+    </div>
