@@ -7,7 +7,7 @@ WORKDIR /frontapp
 ADD . /frontapp
 
 # Installl the dependencies
-RUN npm install
+RUN npm install -g @angular/cli && npm install
 
 # Publish the port
 # EXPOSE 7070
