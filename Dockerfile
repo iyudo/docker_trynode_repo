@@ -4,4 +4,5 @@ FROM node:latest
 WORKDIR /app
 
 # Install dependencies
-RUN npm install @angular/cli -g
+RUN npm install -g node-gyp-install
+RUN npm install -g @angular/cli
