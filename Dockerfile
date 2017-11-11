@@ -4,4 +4,4 @@ FROM node:latest
 WORKDIR /app
 
 # Install dependencies
-RUN npm install express-generator -g
+RUN npm install @angular/cli -g
