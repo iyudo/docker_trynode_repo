@@ -21,5 +21,6 @@ RUN apk update \
 RUN npm install -g @angular/cli && npm install
 
 # Publish the port
-# EXPOSE 7070
+EXPOSE 4200
+
 CMD [ "ng", "serve"]
