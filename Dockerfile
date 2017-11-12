@@ -9,4 +9,4 @@ WORKDIR $HOME
 USER node
 
 # Install dependencies
-RUN npm install -g angular-cli
+RUN npm install -g @angular/cli
