@@ -1,26 +1,19 @@
-FROM node:6.11-alpine as node-angular-cli
+FROM node:latest
 
+ENV HOME=/usr/src/app
 # Create the working dir
-WORKDIR /frontapp
+RUN mkdir $HOME
+RUN chown node:node $HOME
+RUN chown -R node:node /usr/local/
+
+WORKDIR $HOME
+
+USER node
 
 # Copy source code
-ADD . /frontapp
-
-# Define environment variable
-ENV USER root
-
-#Linux setup
-RUN apk update \
-  && apk add --update alpine-sdk \
-  && apk del alpine-sdk \
-  && rm -rf /tmp/* /var/cache/apk/* *.tar.gz ~/.npm \
-  && npm cache clear \
-  && sed -i -e "s/bin\/ash/bin\/sh/" /etc/passwd
+ADD . $HOME
 
 # Installl the dependencies
 RUN npm install -g @angular/cli && npm install
-
-# Publish the port
-EXPOSE 4200
 
 CMD [ "ng", "serve"]
