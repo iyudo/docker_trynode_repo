@@ -1,9 +1,9 @@
 FROM node:latest
 
-ENV HOME=/usr/src/app
+# ENV HOME=/usr/src/app
 # Change working directory
-RUN mkdir $HOME
-RUN chown node:node $HOME
+# RUN mkdir $HOME
+RUN chown node:node ./
 RUN chown -R node:node /usr/local/
 
 
