@@ -5,7 +5,7 @@ ENV HOME=/usr/src/app
 RUN mkdir $HOME
 RUN chown node:node $HOME
 RUN chown -R node:node /usr/local/
-WORKDIR $HOME
+WORKDIR ./my-app
 
 USER node
 
