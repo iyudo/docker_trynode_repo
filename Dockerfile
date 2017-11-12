@@ -5,11 +5,13 @@ ENV HOME=/usr/src/app
 RUN mkdir $HOME
 RUN chown node:node $HOME
 RUN chown -R node:node /usr/local/
-WORKDIR ./my-app
+
 
 USER node
 
 # Install dependencies
 RUN npm install -g @angular/cli
 RUN ng new my-app && cd my-app
+
+WORKDIR ./my-app
 RUN ls
