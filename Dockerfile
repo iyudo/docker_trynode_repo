@@ -11,3 +11,6 @@ USER node
 
 # Install dependencies
 RUN npm install -g @angular/cli
+RUN ng new my-app && cd my-app
+
+CMD [ "ng", "serve"]
