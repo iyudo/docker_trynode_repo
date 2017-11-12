@@ -14,3 +14,4 @@ RUN npm install -g @angular/cli
 RUN ng new my-app && cd my-app
 WORKDIR ./my-app
 RUN ls
+CMD [ "ng", "serve"]
