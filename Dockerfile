@@ -1,8 +1,9 @@
 FROM node:latest
 
+ENV HOME=/usr/src/app
 # Change working directory
-WORKDIR /app
+RUN mkdir $HOME
+WORKDIR $HOME
 
 # Install dependencies
-RUN npm install -g node-gyp-install
 RUN npm install -g @angular/cli
