@@ -6,4 +6,4 @@ RUN mkdir $HOME
 WORKDIR $HOME
 
 # Install dependencies
-RUN npm install -g @angular/cli
+RUN npm install -g angular-cli
